@@ -3,7 +3,7 @@
 
 # Variables
 BINARY_NAME=modbusgo
-PACKAGE=github.com/adibhanna/modbusgo
+PACKAGE=github.com/glaydus/modbusgo
 GO=go
 GOFLAGS=-v
 GOCMD=$(GO)

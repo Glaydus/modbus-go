@@ -13,7 +13,7 @@ NC='\033[0m' # No Color
 
 # Configuration
 PROJECT_NAME="ModbusGo"
-GITHUB_REPO="adibhanna/modbus-go"
+GITHUB_REPO="glaydus/modbus-go"
 
 # Function to print colored output
 print_info() {

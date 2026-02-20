@@ -61,4 +61,4 @@ ls -lh $DIST_DIR/*.tar.gz
 
 echo ""
 echo "To upload to GitHub release:"
-echo "gh release upload $VERSION $DIST_DIR/*.tar.gz --repo adibhanna/modbus-go"
+echo "gh release upload $VERSION $DIST_DIR/*.tar.gz --repo glaydus/modbus-go"

@@ -6,10 +6,10 @@ A production-ready MODBUS TCP server and client implementation in Go.
 
 ```bash
 # Run the MODBUS server
-docker run -d -p 5502:5502 adibhanna/modbus-go:latest
+docker run -d -p 5502:5502 glaydus/modbus-go:latest
 
 # Or with standard MODBUS port
-docker run -d -p 502:502 -p 5502:5502 adibhanna/modbus-go:latest
+docker run -d -p 502:502 -p 5502:5502 glaydus/modbus-go:latest
 ```
 
 ## Tags
@@ -56,7 +56,7 @@ The image includes these pre-built binaries:
 docker run -d \
   --name modbus-server \
   -p 5502:5502 \
-  adibhanna/modbus-go:latest
+  glaydus/modbus-go:latest
 ```
 
 ### Run Simple Server
@@ -65,7 +65,7 @@ docker run -d \
 docker run -d \
   --name modbus-simple \
   -p 5502:5502 \
-  adibhanna/modbus-go:latest \
+  glaydus/modbus-go:latest \
   /app/bin/tcp_server
 ```
 
@@ -76,7 +76,7 @@ docker run -d \
   --name modbus-server \
   -p 5502:5502 \
   -v /path/to/config.json:/app/config.json \
-  adibhanna/modbus-go:latest
+  glaydus/modbus-go:latest
 ```
 
 ### Docker Compose
@@ -85,7 +85,7 @@ docker run -d \
 version: '3.8'
 services:
   modbus-server:
-    image: adibhanna/modbus-go:latest
+    image: glaydus/modbus-go:latest
     ports:
       - "5502:5502"
     restart: unless-stopped

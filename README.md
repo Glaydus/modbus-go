@@ -42,7 +42,7 @@ go get github.com/glaydus/modbus-go@latest
 Or use Docker:
 
 ```bash
-docker pull adibhanna/modbus-go:latest
+docker pull glaydus/modbus-go:latest
 ```
 
 ## 🚀 Quick Start
@@ -390,6 +390,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Documentation**: See [docs/DOCUMENTATION.md](docs/DOCUMENTATION.md)
 - **API Reference**: See [docs/API_REFERENCE.md](docs/API_REFERENCE.md)
-- **Docker Hub**: [adibhanna/modbus-go](https://hub.docker.com/r/adibhanna/modbus-go)
+- **Docker Hub**: [glaydus/modbus-go](https://hub.docker.com/r/glaydus/modbus-go)
 - **Issues**: [GitHub Issues](https://github.com/glaydus/modbus-go/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/glaydus/modbus-go/discussions)
