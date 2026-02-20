@@ -463,6 +463,13 @@ func (t *RTUOverTCPTransport) IsConnected() bool {
 	return t.connected
 }
 
+// SetConnectTimeout sets the connection timeout
+func (t *RTUOverTCPTransport) SetConnectTimeout(timeout time.Duration) {
+	t.mutex.Lock()
+	defer t.mutex.Unlock()
+	t.connectTimeout = timeout
+}
+
 // SetTimeout sets the response timeout
 func (t *RTUOverTCPTransport) SetTimeout(timeout time.Duration) {
 	t.mutex.Lock()

@@ -134,6 +134,7 @@ func (c *Client) GetRetryDelay() time.Duration {
 // SetConnectTimeout sets the connection timeout
 func (c *Client) SetConnectTimeout(timeout time.Duration) {
 	c.connectTimeout = timeout
+	c.transport.SetConnectTimeout(timeout)
 }
 
 // GetConnectTimeout returns the current connection timeout

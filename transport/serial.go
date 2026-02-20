@@ -125,6 +125,13 @@ func (t *RTUTransport) IsConnected() bool {
 	return t.connected
 }
 
+// SetConnectTimeout sets the connection timeout
+func (t *RTUTransport) SetConnectTimeout(timeout time.Duration) {
+	// For serial connections, connection timeout is typically handled
+	// by the OS when opening the port, so we don't need to do anything here
+	// This method exists for interface compliance
+}
+
 // SetTimeout sets the response timeout
 func (t *RTUTransport) SetTimeout(timeout time.Duration) {
 	t.mutex.Lock()
@@ -320,6 +327,13 @@ func (t *ASCIITransport) IsConnected() bool {
 	t.mutex.Lock()
 	defer t.mutex.Unlock()
 	return t.connected
+}
+
+// SetConnectTimeout sets the connection timeout
+func (t *ASCIITransport) SetConnectTimeout(timeout time.Duration) {
+	// For serial connections, connection timeout is typically handled
+	// by the OS when opening the port, so we don't need to do anything here
+	// This method exists for interface compliance
 }
 
 // SetTimeout sets the response timeout

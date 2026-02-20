@@ -21,6 +21,9 @@ type Transport interface {
 	// SendRequest sends a request and returns the response
 	SendRequest(slaveID modbus.SlaveID, request *pdu.Request) (*pdu.Response, error)
 
+	// SetConnectTimeout sets the connection timeout
+	SetConnectTimeout(timeout time.Duration)
+
 	// SetTimeout sets the response timeout
 	SetTimeout(timeout time.Duration)
 
