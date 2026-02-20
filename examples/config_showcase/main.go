@@ -5,8 +5,8 @@ import (
 	"log"
 	"time"
 
-	modbus "github.com/adibhanna/modbus-go"
-	modbuslib "github.com/adibhanna/modbus-go/modbus"
+	modbus "github.com/glaydus/modbus-go"
+	modbuslib "github.com/glaydus/modbus-go/modbus"
 )
 
 func main() {

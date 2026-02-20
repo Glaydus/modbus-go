@@ -36,7 +36,7 @@ A comprehensive, production-ready MODBUS implementation in Go supporting the com
 ## 📦 Installation
 
 ```bash
-go get github.com/adibhanna/modbus-go@latest
+go get github.com/glaydus/modbus-go@latest
 ```
 
 Or use Docker:
@@ -55,7 +55,7 @@ package main
 import (
     "fmt"
     "log"
-    modbus "github.com/adibhanna/modbus-go"
+    modbus "github.com/glaydus/modbus-go"
 )
 
 func main() {
@@ -87,7 +87,7 @@ package main
 
 import (
     "log"
-    modbus "github.com/adibhanna/modbus-go"
+    modbus "github.com/glaydus/modbus-go"
 )
 
 func main() {
@@ -159,7 +159,7 @@ config.SaveClientConfigToJSON("saved-config.json")
 For comprehensive configuration with testing parameters, device profiles, and logging options, use the extended configuration system:
 
 ```go
-import "github.com/adibhanna/modbus-go/config"
+import "github.com/glaydus/modbus-go/config"
 
 // Load extended configuration
 cfg, err := config.LoadConfig("config.json")
@@ -391,5 +391,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - **Documentation**: See [docs/DOCUMENTATION.md](docs/DOCUMENTATION.md)
 - **API Reference**: See [docs/API_REFERENCE.md](docs/API_REFERENCE.md)
 - **Docker Hub**: [adibhanna/modbus-go](https://hub.docker.com/r/adibhanna/modbus-go)
-- **Issues**: [GitHub Issues](https://github.com/adibhanna/modbus-go/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/adibhanna/modbus-go/discussions)
+- **Issues**: [GitHub Issues](https://github.com/glaydus/modbus-go/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/glaydus/modbus-go/discussions)

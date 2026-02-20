@@ -132,6 +132,6 @@ COPY . .
 CMD ["make", "ci"]
 
 # Labels
-LABEL maintainer="github.com/adibhanna/modbus-go" \
+LABEL maintainer="github.com/glaydus/modbus-go" \
       version="1.0.0" \
       description="ModbusGo - Complete MODBUS Protocol Implementation in Go"

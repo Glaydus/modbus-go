@@ -7,7 +7,7 @@ import (
 	"path/filepath"
 	"time"
 
-	"github.com/adibhanna/modbus-go/modbus"
+	"github.com/glaydus/modbus-go/modbus"
 )
 
 // ConnectionConfig holds connection-related settings

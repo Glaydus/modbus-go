@@ -3,7 +3,7 @@
 ## Package Structure
 
 ```
-github.com/adibhanna/modbus-go
+github.com/glaydus/modbus-go
 ├── modbus/       # Core types and constants
 ├── pdu/          # Protocol Data Unit handling
 ├── transport/    # Transport implementations
@@ -60,7 +60,7 @@ jsonConfig := clientConfig.ToJSONClientConfig()
 ### Extended Configuration
 
 ```go
-import "github.com/adibhanna/modbus-go/config"
+import "github.com/glaydus/modbus-go/config"
 
 // Load comprehensive configuration
 cfg, err := config.LoadConfig("config.json")

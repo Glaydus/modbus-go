@@ -50,8 +50,8 @@ The MODBUS Application Protocol header (MBAP) is used for TCP/IP transport:
 
 ```go
 import (
-    modbus "github.com/adibhanna/modbus-go"
-    "github.com/adibhanna/modbus-go/transport"
+    modbus "github.com/glaydus/modbus-go"
+    "github.com/glaydus/modbus-go/transport"
 )
 
 // Simple TCP client
@@ -144,7 +144,7 @@ Secure your MODBUS TCP communications with TLS encryption.
 ```go
 import (
     "crypto/tls"
-    "github.com/adibhanna/modbus-go/transport"
+    "github.com/glaydus/modbus-go/transport"
 )
 
 // Basic TLS with server certificate verification
@@ -234,7 +234,7 @@ Unlike standard MODBUS TCP which uses MBAP headers, RTU over TCP sends RTU frame
 ### RTU over TCP Usage
 
 ```go
-import "github.com/adibhanna/modbus-go/transport"
+import "github.com/glaydus/modbus-go/transport"
 
 // Create RTU over TCP transport
 rtuOverTCP := transport.NewRTUOverTCPTransport("192.168.1.100:4001")
@@ -283,7 +283,7 @@ MODBUS over UDP for low-latency, connectionless communication.
 ### UDP Usage
 
 ```go
-import "github.com/adibhanna/modbus-go/transport"
+import "github.com/glaydus/modbus-go/transport"
 
 // Create UDP transport
 udpTransport := transport.NewUDPTransport("192.168.1.100:502")
@@ -366,7 +366,7 @@ func calculateCRC16(data []byte) uint16 {
 ### RTU Client Usage
 
 ```go
-import "github.com/adibhanna/modbus-go/transport"
+import "github.com/glaydus/modbus-go/transport"
 
 // Create serial configuration
 config := transport.NewSerialConfig(

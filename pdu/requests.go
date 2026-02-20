@@ -3,7 +3,7 @@ package pdu
 import (
 	"fmt"
 
-	"github.com/adibhanna/modbus-go/modbus"
+	"github.com/glaydus/modbus-go/modbus"
 )
 
 // ReadCoilsRequest creates a PDU for reading coils

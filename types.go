@@ -1,7 +1,7 @@
 package modbus
 
 import (
-	"github.com/adibhanna/modbus-go/modbus"
+	"github.com/glaydus/modbus-go/modbus"
 )
 
 // Re-export types from modbus package

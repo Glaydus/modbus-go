@@ -3,8 +3,8 @@ package modbus
 import (
 	"testing"
 
-	"github.com/adibhanna/modbus-go/modbus"
-	"github.com/adibhanna/modbus-go/pdu"
+	"github.com/glaydus/modbus-go/modbus"
+	"github.com/glaydus/modbus-go/pdu"
 )
 
 func TestDiagnosticsFunctions(t *testing.T) {

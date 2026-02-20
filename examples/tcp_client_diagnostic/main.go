@@ -7,9 +7,9 @@ import (
 	"net"
 	"time"
 
-	modbus "github.com/adibhanna/modbus-go"
-	"github.com/adibhanna/modbus-go/config"
-	modbuslib "github.com/adibhanna/modbus-go/modbus"
+	modbus "github.com/glaydus/modbus-go"
+	"github.com/glaydus/modbus-go/config"
+	modbuslib "github.com/glaydus/modbus-go/modbus"
 )
 
 func main() {

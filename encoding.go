@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"math"
 
-	"github.com/adibhanna/modbus-go/modbus"
+	"github.com/glaydus/modbus-go/modbus"
 )
 
 // Endianness represents the byte order for multi-byte values

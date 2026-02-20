@@ -3,8 +3,8 @@ package transport
 import (
 	"time"
 
-	"github.com/adibhanna/modbus-go/modbus"
-	"github.com/adibhanna/modbus-go/pdu"
+	"github.com/glaydus/modbus-go/modbus"
+	"github.com/glaydus/modbus-go/pdu"
 )
 
 // Transport defines the interface for MODBUS transport layers

@@ -35,7 +35,7 @@ ModbusGo is a comprehensive, production-ready MODBUS protocol implementation in 
 ### Installation
 
 ```bash
-go get github.com/adibhanna/modbus-go
+go get github.com/glaydus/modbus-go
 ```
 
 ## Architecture Overview
@@ -78,7 +78,7 @@ package main
 import (
     "fmt"
     "log"
-    modbus "github.com/adibhanna/modbus-go"
+    modbus "github.com/glaydus/modbus-go"
 )
 
 func main() {
@@ -104,7 +104,7 @@ package main
 
 import (
     "log"
-    modbus "github.com/adibhanna/modbus-go"
+    modbus "github.com/glaydus/modbus-go"
 )
 
 func main() {
@@ -268,7 +268,7 @@ if err != nil {
 For comprehensive testing, device profiles, and advanced configuration management, use the extended configuration system:
 
 ```go
-import "github.com/adibhanna/modbus-go/config"
+import "github.com/glaydus/modbus-go/config"
 
 // Load extended configuration
 cfg, err := config.LoadConfig("extended-config.json")
@@ -703,7 +703,7 @@ import (
     "crypto/tls"
     "crypto/x509"
     "io/ioutil"
-    "github.com/adibhanna/modbus-go/transport"
+    "github.com/glaydus/modbus-go/transport"
 )
 
 // Basic TLS with server certificate verification
@@ -749,7 +749,7 @@ insecureConfig := &tls.Config{
 For serial-to-Ethernet converters that use RTU framing over TCP (not standard MODBUS TCP):
 
 ```go
-import "github.com/adibhanna/modbus-go/transport"
+import "github.com/glaydus/modbus-go/transport"
 
 // RTU over TCP uses RTU framing (slave ID + PDU + CRC) over TCP connection
 // This is common with serial-to-Ethernet gateways that don't translate to MODBUS TCP
@@ -779,7 +779,7 @@ values, err := client.ReadHoldingRegisters(0, 10)
 For MODBUS over UDP (less reliable but lower latency):
 
 ```go
-import "github.com/adibhanna/modbus-go/transport"
+import "github.com/glaydus/modbus-go/transport"
 
 // MODBUS over UDP - uses MBAP header like TCP but over UDP
 udpTransport := transport.NewUDPTransport("192.168.1.100:502")
@@ -809,7 +809,7 @@ values, err := client.ReadHoldingRegisters(0, 10)
 Configure automatic connection cleanup after periods of inactivity:
 
 ```go
-import "github.com/adibhanna/modbus-go/transport"
+import "github.com/glaydus/modbus-go/transport"
 
 tcpTransport := transport.NewTCPTransport("192.168.1.100:502")
 
@@ -828,7 +828,7 @@ tcpTransport.SetConnectTimeout(10 * time.Second)
 Add custom logging for debugging and monitoring:
 
 ```go
-import "github.com/adibhanna/modbus-go/transport"
+import "github.com/glaydus/modbus-go/transport"
 
 // Logger interface - implement Printf method
 type MyLogger struct{}
@@ -1981,4 +1981,4 @@ The library is suitable for:
 - Energy management systems
 - Testing and simulation tools
 
-For additional support or contributions, please visit the [GitHub repository](https://github.com/adibhanna/modbus-go).
+For additional support or contributions, please visit the [GitHub repository](https://github.com/glaydus/modbus-go).

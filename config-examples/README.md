@@ -48,7 +48,7 @@ Configuration optimized for Schneider Electric MODBUS devices:
 
 **Usage:**
 ```go
-import "github.com/adibhanna/modbus-go/config"
+import "github.com/glaydus/modbus-go/config"
 
 cfg, err := config.LoadConfig("config-examples/schneider-electric.json")
 client := modbus.NewTCPClient(cfg.Connection.GetFullAddress())
@@ -177,7 +177,7 @@ client, err := modbus.NewTCPClientFromJSONString(jsonConfig, "192.168.1.102:502"
 Use the full configuration files directly:
 
 ```go
-import "github.com/adibhanna/modbus-go/config"
+import "github.com/glaydus/modbus-go/config"
 
 // Load full configuration
 cfg, err := config.LoadConfig("config-examples/schneider-electric.json")

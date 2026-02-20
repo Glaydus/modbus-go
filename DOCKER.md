@@ -110,9 +110,9 @@ nc -z localhost 5502
 
 ## Source Code
 
-- **GitHub**: https://github.com/adibhanna/modbus-go
-- **Documentation**: https://github.com/adibhanna/modbus-go/blob/main/docs/DOCUMENTATION.md
+- **GitHub**: https://github.com/glaydus/modbus-go
+- **Documentation**: https://github.com/glaydus/modbus-go/blob/main/docs/DOCUMENTATION.md
 
 ## License
 
-MIT License - see [LICENSE](https://github.com/adibhanna/modbus-go/blob/main/LICENSE)
+MIT License - see [LICENSE](https://github.com/glaydus/modbus-go/blob/main/LICENSE)
