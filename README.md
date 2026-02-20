@@ -390,6 +390,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - **Documentation**: See [docs/DOCUMENTATION.md](docs/DOCUMENTATION.md)
 - **API Reference**: See [docs/API_REFERENCE.md](docs/API_REFERENCE.md)
-- **Docker Hub**: [glaydus/modbus-go](https://hub.docker.com/r/glaydus/modbus-go)
 - **Issues**: [GitHub Issues](https://github.com/glaydus/modbus-go/issues)
 - **Discussions**: [GitHub Discussions](https://github.com/glaydus/modbus-go/discussions)
