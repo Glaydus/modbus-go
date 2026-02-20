@@ -273,6 +273,52 @@ func TestClientTimeout(t *testing.T) {
 	}
 }
 
+func TestSetConnectTimeout(t *testing.T) {
+	// Skip on Windows due to timing inconsistencies with very short timeouts
+	if runtime.GOOS == "windows" {
+		t.Skip("Skipping timeout test on Windows due to timing inconsistencies")
+	}
+
+	// Start a test server
+	dataStore := NewDefaultDataStore(100, 100, 100, 100)
+	server, err := NewTCPServer("localhost:15503", dataStore)
+	if err != nil {
+		t.Fatalf("Failed to create server: %v", err)
+	}
+
+	if err := server.Start(); err != nil {
+		t.Fatalf("Failed to start server: %v", err)
+	}
+	defer server.Stop()
+
+	// Give server time to start
+	time.Sleep(100 * time.Millisecond)
+
+	// Create client with very short connect timeout
+	client := NewTCPClient("localhost:15503")
+	client.SetSlaveID(1)
+	client.SetConnectTimeout(1 * time.Nanosecond) // Extremely short connect timeout
+
+	// This should timeout
+	err = client.Connect()
+	if err == nil {
+		t.Error("Expected timeout error")
+	}
+
+	// Set a default connect timeout and test again
+	client.SetConnectTimeout(5 * time.Second)
+	if err = client.Connect(); err != nil {
+		t.Fatalf("Failed to connect: %v", err)
+	}
+	defer client.Close()
+
+	// This should work with the default timeout
+	_, err = client.ReadCoils(0, 10)
+	if err != nil {
+		t.Fatalf("Failed to read coils: %v", err)
+	}
+}
+
 // Benchmark client operations
 func BenchmarkClientReadHoldingRegisters(b *testing.B) {
 	// Start server
